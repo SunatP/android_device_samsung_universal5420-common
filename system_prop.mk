@@ -27,12 +27,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.winupdate=0 \
+    ro.hardware.egl=mali \
+    ro.hardware.vulkan=mali \
     ro.bq.gpu_to_cpu_unsupported=1 \
     ro.surface_flinger.running_without_sync_framework = true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers = 3 \
     debug.sf.disable_backpressure=1 \
+    ro.config.avoid_gfx_accel=true \
     debug.sf.latch_unsignaled=1 \
-    ro.opengles.version=196609
+    ro.opengles.version=196609 
+
+# HWC
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.sf.latch_unsignaled=1 \
+    debug.sf.disable_backpressure=1 \
+    debug.hwc.winupdate=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -54,4 +63,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0 \
-    wifi.direct.interface=p2p0
+    wlan.wfd.hdcp=disable \
+    net.tethering.noprovisioning=true \
+    ro.hdmi.enable=true \
+    ro.hdmi.mirror.enable=true \
+    wifi.direct.interface=p2p-dev-wlan0
+
+# ADB Insecure
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1
+
+# Enable ADB Debugging By Default & Disable USB Debugging Popup
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=mtp,adb
+
+# Define default initial receive window size in segments.
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tcp.default_init_rwnd=60
+
+# Burn-in protection
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.systemui.burn_in_protection=true
+
