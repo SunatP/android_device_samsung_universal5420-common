@@ -89,3 +89,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.systemui.burn_in_protection=true
 
+# EGL blobs crash on screen off
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.egl.destroy_after_detach=true
+
+# Disable colorfade, which can cause crash when sleeping
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.displaypower.colorfade=false
+
+# Low Ram Config
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.low_ram=true
