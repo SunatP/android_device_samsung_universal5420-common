@@ -151,4 +151,15 @@
          your device's memory use without going to the point of causing applications to turn
          off features. -->
     <bool name="config_avoidGfxAccel">true</bool>
+
+    <!-- Common AOSP overlays -->
+	<!-- Whether the device supports Smart Pixels --> 
+    <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- Button brightness -->
+    <bool name="config_button_brightness_support">true</bool>
+    <integer name="config_button_brightness_default">128</integer>
+
+    <!-- do not use H265 encoder for screen recordings -->
+    <bool name="config_useNewScreenRecEncoder">false</bool>
 </resources>
