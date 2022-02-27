@@ -66,8 +66,8 @@ Only the three quirks included above are recognized at this point:
 
 <MediaCodecs>
     <Settings>
-        <Setting name="supports-multiple-secure-codecs" value="false" />
-        <Setting name="supports-secure-with-non-secure-codec" value="false" />
+        <Setting name="supports-multiple-secure-codecs" value="true" />
+        <Setting name="supports-secure-with-non-secure-codec" value="true" />
         <Setting name="max-video-encoder-input-buffers" value="9" />
         <Variant name="slow-cpu" enabled="true" />
     </Settings>
@@ -93,7 +93,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="32x32" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="489600" />
+            <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
             <Limit name="concurrent-instances" max="16"/>
             <Feature name="adaptive-playback" />
@@ -106,7 +106,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="32x32" max="720x480" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="489600" />
+            <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
             <Limit name="concurrent-instances" max="16"/>
             <Feature name="adaptive-playback" />
@@ -143,7 +143,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" min="32x32" max="2560x1600" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="489600" />
+            <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-40000000" />
             <Limit name="concurrent-instances" max="16"/>
             <Feature name="adaptive-playback" />
@@ -153,12 +153,12 @@ Only the three quirks included above are recognized at this point:
             <Quirk name="requires-allocate-on-output-ports" />
             <Quirk name="decoder-ignores-streamcorrupt-error" />
             <Quirk name="video-controller-check-enable" />
-            <Limit name="size" min="32x32" max="2560x1600" />
+            <Limit name="size" min="32x32" max="1920x1080" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" min="1" max="489600" />
+            <Limit name="blocks-per-second" min="1" max="979200" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="1"/>	    
+            <Limit name="concurrent-instances" max="2"/>	    
             <Feature name="adaptive-playback" />
             <Feature name="secure-playback" required="true" />
         </MediaCodec>
