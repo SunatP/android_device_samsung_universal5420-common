@@ -20,10 +20,6 @@ lib/libGLES_trace.so:vendor/lib/libGLES_trace.so
 # libw is a local libm compile of LineageOS/android_bionic@40e6fdba0 with 269025 applied on top
 vendor/lib/libw.so|14b82a29223980532b54739c2b94c318e2675515
 
-# Mobicore
-bin/mcDriverDaemon:vendor/bin/mcDriverDaemon
-lib/libMcClient.so:vendor/lib/libMcClient.so
-lib/libMcRegistry.so:vendor/lib/libMcRegistry.so
 
 # NXP Noise Cancelling
 vendor/lib/liblvverx_3.25.00.so:vendor/lib/soundfx/liblvverx.so|575865ce767dd1ab576118ba47254799757a2a1b
