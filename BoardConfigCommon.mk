@@ -19,8 +19,6 @@ COMMON_PATH := device/samsung/universal5420-common
 BUILD_BROKEN_DUP_RULES := true
 
 # Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_BOOTANIMATION_HALF_RES := true
 
 # Include path
