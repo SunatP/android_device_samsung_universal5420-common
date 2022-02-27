@@ -124,6 +124,12 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
+# Mobicore
+PRODUCT_PACKAGES += \
+    mcDriverDaemon \
+    libMcClient \
+    libMcRegistry
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-service.universal5420
